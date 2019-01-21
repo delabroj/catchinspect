@@ -12,21 +12,21 @@ Start service:
 
 ### Catch Service
 
-Send request to http://localhost:8080
+Send request to http://localhost:10101
 
 ### Inspect Service
 
-The most recent request made to the catch service can be seen at http://localhost:8081
+The most recent request made to the catch service can be seen at http://localhost:10102
 
 ### Example
 
 #### Catch
 
 ```shell
-curl -X POST --url localhost:8080/?url1=hello -d "body1=world"
+curl -X POST --url localhost:10101/?url1=hello -d "body1=world"
 ```
 
-#### Inspect (http://localhost:8081)
+#### Inspect (http://localhost:10102)
 
 ```
 Form Values: url.Values{"url1":[]string{"hello"}, "body1":[]string{"world"}}
@@ -34,7 +34,7 @@ Form Values: url.Values{"url1":[]string{"hello"}, "body1":[]string{"world"}}
 Remote Address: 127.0.0.1:53814
 
 POST /?url1=hello HTTP/1.1
-Host: localhost:8080
+Host: localhost:10101
 Accept: */*
 Content-Length: 11
 Content-Type: application/x-www-form-urlencoded

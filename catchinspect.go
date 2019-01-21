@@ -26,9 +26,9 @@ func inspectHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	catchMux := http.NewServeMux()
 	catchMux.HandleFunc("/", catchHandler)
-	go http.ListenAndServe(":8080", catchMux)
+	go http.ListenAndServe(":10101", catchMux)
 
 	inspectMux := http.NewServeMux()
 	inspectMux.HandleFunc("/", inspectHandler)
-	http.ListenAndServe(":8081", inspectMux)
+	http.ListenAndServe(":10102", inspectMux)
 }
